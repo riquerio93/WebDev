@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Project 1</title>
+	
+	<!-- jquery, widgets and themes -->
+    <link  href="https://code.jquery.com/ui/1.13.2/themes/smoothness/jquery-ui.min.css" rel="stylesheet"/>
+	<link rel='stylesheet' href='https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/blitzer/jquery-ui.css'>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+	<script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.19.2/jquery.validate.js"></script>	
+
+	<!-- project 1 style and jquery -->
+	<link href="css/styles.css" rel="stylesheet" />
+	<script src="scripts/jquery_proj1.js" type="text/javascript"></script>
+	
+	<!--Infinite Scroller plugin-->
+	<!-- 
+	REFERENCE LINK
+	https://www.jqueryscript.net/slider/Infinite-Scroller-Plugin-jQuery.html
+	-->
+	<link rel="stylesheet" href="plugins/Infinite-Scroller-Plugin-jQuery/style.css" />
+	<script src="plugins/Infinite-Scroller-Plugin-jQuery/infiniteslidev2.js"></script>
+
+<!-- weirdo plugin... breaks my js file if i place this in there, only wants to work while in the html file. -->
+<script type="text/javascript">
+	$(function(){
+		$('.scroll1').infiniteslide();
+	});
+</script>
+
+</head>
+<body>
+
+<header>
+	<!-- add real photos
+		on second thought, nah. "Featured items" can be anything. So random photos for featured items will suffice. 
+	-->
+	<ul class="scroll1">
+		<li><img src="https://placeimg.com/400/300/any" alt="" /></li>
+		<li><img src="https://placeimg.com/400/300/arch" alt="" /></li>
+		<li><img src="https://placeimg.com/400/300/tech" alt="" /></li>
+		<li><img src="https://placeimg.com/400/300/tech/sepia" alt="" /></li>
+		<li><img src="https://placeimg.com/400/300/animals" alt="" /></li>
+		<li><img src="https://placeimg.com/400/300/animals/grayscale" alt="" /></li>
+	</ul>
+</header>
+
+<main>
+	<div id="main-container">
+		<div id="resume-container">
+		
+		<!-- jump mechanic that I dont feel like styling. This small web page doesn't really need such a thing, but it meets the requirement. -->
+		<a href="#contact">contact</a>
+		<a href="#hobbies">hobbies</a>
+		<a href="#subscribe">Book appt or join newsletter</a>
+			<div id="resume">
+				<h3> CDK Global </h3>
+				<h4> Software Engineer III &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; June 2017 - Present</h4>
+				<p> Xamarin android and Xamarin iOS mobile development <br> Front end development and Back end development <br> 
+				Research, plan, and design UI mockups. Edited and finalized UI with assistance from Mobile team and UX team. <br>
+				Performed software feature demos. <br>
+				Previous Sales App project lead. <br>
+				Elead CRM Mobile (on google play store and apple store)
+				</p>
+				<h3> Florida State University </h3>
+				<h4> Teaching Assistant &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Sept 2021 - Present</h4>
+				<p> COP3014 Programming I <br> Assists with teaching C++ programming and grading student assignments </p>
+				<h3> Nanthealth </h3>
+				<h4> Software Engineer Intern &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  May 2016 - Sept 2016</h4>
+				<p> QA <br> Wrote automated testing scripts <br> Verified product efficiency and client requirements. <br> DeviceConX v5.10-v5.12</p>
+				<h3> GoodWill </h3>
+				<h4> Computer Trainer &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Dec 2015 - Aug 2016</h4>
+				<p> Managed content quality and distribution of GoodWill e-courses <br> Instructor/Developer of Intro to Java Programming e-course <br> Instructor/Developer of Intro to C++ Programming e-course </p>
+				
+				<table id="education-table">
+					<thead>
+						<tr>
+							<th>Degree/Cert</th>
+							<th>Institution</th>
+							<th>Year Earned</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>B.A. Computer Science</td>
+							<td>Florida State University</td>
+							<td>2016</td>
+						</tr>
+						<tr>
+							<td>B.S. Digital Media & Web Development</td>
+							<td>Gulf Coast State College</td>
+							<td>(TBO) Summer 2023</td>
+						</tr>
+						<tr>
+							<td>A.S. Business Administration & Management</td>
+							<td>Gulf Coast State College</td>
+							<td>2022</td>
+						</tr>
+						<tr>
+							<td>Certified DevSecOps Professional</td>
+							<td>Practical DevSecOps</td>
+							<td>2021</td>
+						</tr>
+						<tr>
+							<td>USA Weightlifting Level 1</td>
+							<td>Team USA Weightlifting</td>
+							<td>2022</td>
+						</tr>
+						<tr>
+							<td>CrossFit Level 1</td>
+							<td>CrossFit LLC</td>
+							<td>2021</td>
+						</tr>
+						<tr>
+							<td>PADI Advanced Diver</td>
+							<td>PADI</td>
+							<td>2022</td>
+						</tr>
+				</tbody>
+			</table>
+		</div> <!-- end resume div -->
+	</div>  <!-- end resume container div -->
+		
+		<!-- 
+		ALL HOBBIES NEEDS A MINIMUM OF 4 PICTURES WITH ONLY 1 PIC SHOWINBG AT A TIME, WITH FULL DESCRIPTION PER HOBBIES
+
+		Taking some creative freedom with this requirement. Substituting some pictures for videos. Using accordion to showcase 2 at a time or 1 at a time.
+		-->
+		<div id="hobbies">
+		<a href="#contact">contact</a>
+		<a href="#resume">resume</a>
+		<a href="#subscribe">Book appt or join newsletter</a>
+			<div id="tabs">
+				<ul>
+					<li><a href="#fitness">FITNESS</a></li>
+					<li><a href="#scuba-diving">SCUBA DIVING</a></li>
+					<li><a href="#content-creating">CONTENT CREATING</a></li>
+					<li><a href="#gaming">GAMING</a></li>    
+				</ul>
+			
+				<div id="fitness">
+					<!-- accordion widget -->
+					<p> I am a level 1 Crossfit Trainer and a level 1 USA-Weightlifting Coach. </p>
+					<p> Here are some old Olympic Lifting demo videos. </p>
+					<div id="fitness-accordion">
+						<h3> Deadlift </h3>
+						<div>
+							<video controls poster="">
+								<source src="media/Deadlift-Side.mp4" type="video/mp4">
+								Your browser does not support the video element.
+							</video>
+							<p>
+							Demo
+							</p>
+							<video controls poster="">
+								<source src="media/Deadlift-315.mp4" type="video/mp4">
+								Your browser does not support the video element.
+							</video>
+							<p>
+							Most recent Deadlift PR. 315lbs. <br> (Note, rounded back is not good!)
+							</p>
+						</div>
+						<h3> Cleans </h3>
+						<div>
+							<video controls poster="">
+								<source src="media/Power-Clean-Side.mp4" type="video/mp4">
+								Your browser does not support the video element.
+							</video>
+							<p>
+							Power Clean
+							</p>
+							<video controls poster="">
+								<source src="media/Full-Clean-Side.mp4" type="video/mp4">
+								Your browser does not support the video element.
+							</video>
+							<p>
+							Full Clean aka Squat Clean
+							</p>
+						</div>
+							<h3> Snatches </h3>
+						<div>
+							<video controls poster="">
+								<source src="media/Power-Snatch-Side.mp4" type="video/mp4">
+								Your browser does not support the video element.
+							</video>
+							<p>
+							Power Snatch
+							</p>
+							<video controls poster="">
+								<source src="media/Full-Snatch-Side.mp4" type="video/mp4">
+								Your browser does not support the video element.
+							</video>
+							<p>
+							Full Snatch aka Squat Snatch
+							</p>			
+						</div>
+					</div> <!--end fitness accordion widget -->
+				</div>
+			
+				<div id="scuba-diving">
+					<p> As an advanced scuba diver, I often manage to go out and just enjoy some time under the sea. 
+					 Every now and then i'll bring a camera to photograph some of the sites, fish and wrecks I come across. </p>
+					<p> I've learned everything there is about being a diver from my father. Who's been a diver master for well over a decade now. </p>
+					<div id="scuba-accordion">
+						<h3> My father and I </h3>
+						<div>
+							<img src="images/Dive1.png" height="300px" width="300px" alt="" />
+						</div>
+						<h3> Shipwreck near span 12, PCB </h3>
+						<div>
+							<img src="images/Dive5.png" height="300px" width="300px" alt="" />
+						</div>
+							<h3> Goliath Grouper </h3>
+						<div>
+							<img src="images/Dive8.png" height="300px" width="300px" alt="" />
+						</div>
+							<h3> Seahorse </h3>
+						<div>
+							<img src="images/Dive9.jpg" height="300px" width="300px" alt="" />
+						</div>
+					</div> <!--end scuba accordion widget -->
+				</div>
+			
+				<div id="content-creating">
+					<p> Whenever I'm not working, or workout out, or even completeing these questionable assignments for my classes. I often get bored. </p>
+					<p> To appease that boredom I seldomly post content to Twitch, TikTok and other social media. </p>
+					<p> However, I am not consistent with this. I do hope to one be a bit more consisent just for the sake of my own sanity. </p>				
+					<div id="content-accordion">
+						<h3> Twitch </h3>
+						<div>
+							<img src="images/logo-1.png" height="100px" width="100px" alt="" />
+							<a href="https://www.twitch.tv/informalrai">Link to Twitch </a>
+						</div>
+						<h3> Youtube - No videos currently </h3>
+						<div>
+							<img src="images/logo-2.jpg" height="100px" width="100px" alt="" />
+							<a href="https://www.youtube.com/channel/UCn1lLk1aPsFpDtO4qO9exfw">Link to youtube. Again no videos so, idk why you would need this.... </a>
+						</div>
+							<h3> Instagram </h3>
+						<div>
+							<img src="images/Logo-3.jpg" height="100px" width="100px" alt="" />
+							<a href="https://www.instagram.com/riqueriver93/">Link to Instagram </a>
+						</div>
+							<h3> TikTok </h3>
+						<div>
+							<img src="images/Logo-4.jpeg" height="100px" width="100px" alt="" />
+							<a href="https://www.tiktok.com/@riqueriver93">Link to TikTok </a>
+						</div>
+					</div> <!--end content accordion widget -->
+				</div>
+			
+				<div id="gaming">
+					<p> I am an avid gamer. However, lately it appears i've had the same games on repeat. </p>
+					<p> Therefore, here are a few upcoming games I am excited to be able to play once they've been released. Hopefully, i'll be able to add the gameplay to my content creation. </p>
+					<div id="game-accordion">
+						<h3> Pokemon Scarlet/Violet </h3>
+						<div>
+							<img src="images/pokemonSV.png" height="300px" width="300px" alt="" />
+							<a href="https://www.youtube.com/watch?v=Iew1FwU4YCo">Link to game trailer </a>
+						</div>
+						<h3> Silent Hill 2 (Remake) </h3>
+						<div>
+							<img src="images/SilentHill2.jpg" height="300px" width="300px" alt="" />
+							<a href="https://store.steampowered.com/app/2124490/SILENT_HILL_2/">Link to game trailer </a>
+						</div>
+							<h3> Mario + Rabbids </h3>
+						<div>
+							<img src="images/Mario.jpg" height="300px" width="300px" alt="" />
+							<a href="https://www.nintendo.com/store/products/mario-plus-rabbids-sparks-of-hope-switch/">Link to game trailer </a>
+						</div>
+							<h3> Resident Evil 4 (Remake) </h3>
+						<div>
+							<img src="images/RE-4.jpg" height="300px" width="300px" alt="" />
+							<a href="https://www.youtube.com/watch?v=pQsyi4j1RqM">Link to game trailer </a>
+						</div>
+					</div> <!--end game accordion widget -->
+				</div>
+			</div> <!-- end tabs widget -->
+		</div> <!-- end hobbies div -->
+		
+		
+		<div id="subscribe-container">
+		<a href="#contact">contact</a>
+		<a href="#hobbies">hobbies</a>
+		<a href="#resume">resume</a>
+			<div id="subscribe">
+				<h3> Book an appointment for something with me. </h3>
+				<form id="appointment">
+					<p>
+						<label for="fName">First Name:</label>
+						<input type="text" name="fName" id="fName" placeholder="John"/>
+						<label for="lName">Last Name:</label>
+						<input type="text" name="lName" id="lName" placeholder="Smith"/>
+					</p>
+					<p>
+						<label for="email">Email:</label>
+						<input type="email" name="email" id="email" placeholder="email@email.com"/>
+					</p>
+					<p>
+						<label for="date">Appt Date:</label>
+						<input class="appt-date" name="date" id="date"/>
+					</p>
+	
+					<input type="submit" name="appt-submit" id="appt-submit" value=" Book "/>
+				</form>
+				<h3> Subscribe to my newsletter for whatever kind of tea you want spilled. </h3>
+				<form id="newsletter">
+					<p>
+						<label for="fName">First Name:</label>
+						<input type="text" name="fName" id="fName" placeholder="John"/>
+						<label for="lName">Last Name:</label>
+						<input type="text" name="lName" id="lName" placeholder="Smith"/>
+					</p>
+					<p>
+						<label for="email">Email:</label>
+						<input type="email" name="email" id="email" placeholder="email@email.com"/>
+						<label for="phone">Phone:</label>
+						<input type="phone" name="phone" id="phone" placeholder="111-111-1111" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"/>
+					</p>
+					<p>
+						<label for="bName">Mailing Address: </label>
+						<input type="text" name="address" id="address" placeholder="address;stateInitials;zip"/>
+					</p>
+	
+					<input type="submit" name="newsl-submit" id="newsl-submit" value=" Subscribe "/>
+				</form>
+			</div>
+		</div> <!-- end subscribe container div -->
+		
+		<div id="contact-container">
+			<a href="#resume">resume</a>
+			<a href="#hobbies">hobbies</a>
+			<a href="#subscribe">Book appt or join newsletter</a>
+			<div id="contact">
+				 <p>Contact me at: <a href="mailto:riqueriver93@gmail.com">riqueriver93@gmail.com</a></p>
+				 <p> Phone: 111-111-1111 </p>
+				 <p> Find me on most social medias: @RiqueRiver93 </p>
+			</div>
+		</div> <!--end contact container div -->
+		
+		
+	</div> <!-- end main container -->
+</main>
+
+</body>
+</html>

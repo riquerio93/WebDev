@@ -1,0 +1,60 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+h1 {
+	color:  black;
+	padding: 5px;
+}
+
+main {
+	font-family: Arial, Helvetica, sans-serif;
+	margin: auto;
+    padding: 5px;
+    height: 300px;
+    width: 50%;
+    border: 3px solid black;
+}
+
+form {
+	display: table;
+}
+
+p {
+	display: table-row;
+}
+
+label {
+		display: table-cell;
+		padding: 2px 10px;
+}
+
+input {
+	display: table-cell;
+}
+
+#personalInfo {
+		padding-bottom: 20px;
+}
+
+#testResults {
+		text-align: center;
+		padding: 30px;
+		display: block;
+}
+
+#testResults p {
+		display: block;
+		text-align: center;
+}
+
+#refreshButton {
+		text-align: center;
+		display: none;
+}
+
+.error {
+		color: red;
+		font-weight: bold;
+}

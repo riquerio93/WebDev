@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <title>Chapter 10 Lab</title>
+	<link rel="stylesheet" href="main.css">
+	<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>	
+	<script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.19.2/jquery.validate.js"></script>	
+	
+</head>
+
+<body>
+	<main>
+		<h1> Finish Purchase (Using Validation Plugin)</h1>
+		<form id="purchaseForm">
+		<!-- Section 1 uses email, tel, title, required -->
+			<div id="personalInfo">
+				<p>
+					<label for="fName">First Name</label>
+					<input type="text" id="fName" name="fName">
+					<label for="lName">Last Name</label>
+					<input type="text" id="lName" name="lName">
+				</p>
+				<p>
+					<label for="email">School Email Address</label>
+					<input type="email" id="email" name="email">
+					<label for="phone">Phone Number</label>
+					<input type="tel" id="phone" name="phone">
+				</p>
+				
+			</div>
+			
+			<!-- Section 1 uses date, time
+			autofocus, 2 placeholders, required, pattern, novalidate -->
+			<div id="purchaseInfo">
+				<p>
+					<label for="ccNumber">Credit Card Number</label>
+					<input type="text" id="ccNumber" name="ccNumber" placeholder="XXXX-XXXX-XXXX-XXXX" pattern="[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{4}">
+				</p>
+				<p>
+					<label for="expDate">Expiration Date</label>
+					<input type="date" id="expDate" name="expDate">
+				</p>
+				<p>
+					<label for="cvNumber">CCV</label>
+					<input type="text" id="cvNumber" name="cvNumber" placeholder="123" pattern="[0-9]{3}">
+				</p>
+				<p>
+					<label for="delDate">Delivery Date</label>
+					<input type="date" id="delDate" name="delDate" novalidate>
+				</p>
+				<p>
+					<label for="delTime">Delivery Time</label>
+					<input type="time" id="delTime" name="delTime" min="08:00" max="20:00" novalidate>
+				</p>
+					<input type="submit" id="submitButton">
+				<br><br>
+				<a href="index.html">To WebPage Using JQuery regular expression test methods</a>
+			</div>
+		</form>
+		<script>
+		//Section 5 
+		//uses REQUIRED, MINLENGTH, MAXLENGTH, EMAIL, NUMBER, DATE in validate() method.
+		    $("#purchaseForm").validate({
+				rules: {
+					fName: {required: true, minlength: 3},
+					lName: {required: true, maxlength: 10},
+					email: {required: true, email: true},
+					phone: {required: true},
+					ccNumber: {required: true, number: true},
+					expDate: {required: true, date: true},
+					cvNumber: {required: true, number: true, maxlength: 3}
+				},
+				messages: {
+					fName: {required: "Name Needed", minlength: "Name Must be At least 3 Characters"},
+					lName: {required: "Last Name Needed", maxlength: "Last Name Must be less than 10 Characters"},
+					email: {required: "Email Needed"},
+					phone: {required: "Phone Needed"},
+					ccNumber: {required: "CC Number Needed", number: "CC Number must be a number"},
+					expDate: {required: "EXP Date Needed"},
+					cvNumber: {required: "CV Number Needed", number: "CV Number must be a number", maxlength: "CV Number must be no more than 3 numbers"}
+				},
+				highlight: function (e) {
+                $("purchaseForm").addClass("error")
+				}
+            });
+		</script>
+	</main>
+</body>
+</html>

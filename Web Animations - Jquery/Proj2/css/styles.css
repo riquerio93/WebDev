@@ -1,0 +1,159 @@
+* {
+	margin: 0;
+	padding: 0;
+	font-weight: none;
+}
+
+#main-container {
+	font-family: Arial, Helvetica, sans-serif;
+	margin: auto;
+    width: 100%;
+}
+
+#main-container > div {
+	min-height: 300px;
+	display: block;
+	padding: 2px;
+	border-top: 2px solid white;
+	border-bottom: 2px solid black;
+}
+
+#background-container {
+	background: rgb(69,124,141); /*for non-gradient supportive browsers*/
+	background: -moz-linear-gradient(0deg, rgba(138,186,201,1) 0%, rgba(102,134,144,1) 30%, rgba(69,124,141,1) 100%);
+	background: linear-gradient(0deg, rgba(138,186,201,1) 20%, rgba(102,134,144,1) 40%, rgba(69,124,141,1) 100%) fixed;
+}
+
+#background {
+	color: white;
+}
+
+
+#contact-container {
+	background-color: #57787f;
+}
+
+#contact {
+	vertical-align: bottom;
+	color: white;
+	margin: 20px;
+}
+
+#products {
+	background-color: #658c94;
+}
+
+#products #tabs {
+	width: 45%;
+	min-width: 350px;
+	background-color: #658c94;
+	border: none;
+}
+
+#products #tabs ul{
+	width: 45%;
+}
+
+#products #tabs > div{
+	background: silver;
+	width: 50%;
+	margin-bottom: 10px;
+	
+}
+
+#reserve-container {
+	background-color: #486469;
+	height: 500px;
+}
+
+#reserve {
+	float: right;
+}
+
+#reserve h3 {
+	color: white;
+}
+
+#menu {
+	float: left;
+	display: block;
+	width: 150px;
+	position: fixed;
+	left: 0;
+}
+
+#map-container {
+	background-color: #5b7085;
+}
+
+#map {
+	float: right;
+	height: 300px;
+	width: 300px;
+}
+
+#buynow-container {
+	background-color: #36454F;
+	color: white;
+}
+
+#satisfaction-container {
+	background-color: #36454F;
+	color: white;
+}
+
+#satisfaction th{
+	padding: 20px;
+	float: center;
+}
+
+#satisfaction td{
+	padding-left: 20px;
+	float: center;
+}
+
+#sortable { 
+	list-style-type: none; 
+	margin: 0; 
+	padding: 0; 
+	width: 30%; 
+}
+#sortable li { 
+	margin: 0 3px 3px 3px; 
+	padding: 0.4em; 
+	padding-left: 1.5em; 
+	font-size: 1.4em;
+	height: 18px; 
+}
+#sortable li span { 
+	position: absolute; 
+	margin-left: -1.3em; 
+}
+
+#purchase {
+		float: center;
+}
+
+form {
+	display: table;
+	border-spacing: 2px;
+	color: white;
+}
+
+form p {
+	display: table-row;
+}
+
+form label {
+	display: table-cell;
+}
+
+video {
+	height: 400px;
+	width: 600px;
+}
+
+.error {
+		color: red;
+		font-weight: bold;
+}

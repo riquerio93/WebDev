@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Project 2</title>
+	
+	<!-- jquery, widgets and themes -->
+    <link  href="https://code.jquery.com/ui/1.13.2/themes/smoothness/jquery-ui.min.css" rel="stylesheet"/>
+	<link rel='stylesheet' href='https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/blitzer/jquery-ui.css'>
+	<link href="https://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.css" rel="stylesheet"/>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+	<script src="https://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+	<script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.19.2/jquery.validate.js"></script>	
+	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAF0cLj_2ftoINgjd5S0iL7jhzODdqh2DE"></script>
+
+	<!-- project 2 style and jquery -->
+	<link href="css/styles.css" rel="stylesheet" />
+	<script src="scripts/jquery_proj2.js" type="text/javascript"></script>
+	
+	<!--Infinite Scroller plugin-->
+	<!-- 
+	REFERENCE LINK
+	https://www.jqueryscript.net/slider/Infinite-Scroller-Plugin-jQuery.html
+	-->
+	<link rel="stylesheet" href="plugins/Infinite-Scroller-Plugin-jQuery/style.css" />
+	<script src="plugins/Infinite-Scroller-Plugin-jQuery/infiniteslidev2.js"></script>
+
+<!-- weirdo plugin... breaks my js file if i place this in there, only wants to work while in the html file. -->
+<script type="text/javascript">
+	$(function(){
+		$('.scroll1').infiniteslide();
+	});
+	
+	$( function() {
+    $( "#sortable" ).sortable();
+    });
+	
+	function initMap() {
+	//geocoords not exact to user location. Didn't feel like implenting exact location.
+    var someLocation = {lat: 30.148222, lng: -85.786401};
+    var map = new google.maps.Map(document.getElementById('map'), {
+      zoom: 4,
+      center: someLocation
+    });
+    var marker = new google.maps.Marker({
+      position: someLocation,
+      map: map
+    });
+  }
+</script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAF0cLj_2ftoINgjd5S0iL7jhzODdqh2DE&callback=initMap"></script>
+
+
+</head>
+<body>
+
+	<!-- All the panels for product details -->
+	<div data-role="panel" id="chevyPanel1" data-position="right" data-display="push" data-theme="b">
+		<h1> Chevy 1 </h1>	
+			<p> here's all the fun details about this product....... </p>
+			<p> yep thats it </p>
+	</div>
+	
+	<div data-role="panel" id="chevyPanel2" data-position="right" data-display="push" data-theme="b">
+		<h1> Chevy 2 </h1>	
+			<p> here's all the fun details about this product....... </p>
+			<p> yep thats it </p>		
+	</div>
+	
+	<div data-role="panel" id="chevyPanel3" data-position="right" data-display="push" data-theme="b">
+		<h1> Chevy 3 </h1>	
+			<p> here's all the fun details about this product....... </p>
+			<p> yep thats it </p>		
+	</div>
+	
+	<div data-role="panel" id="chevyPanel4" data-position="right" data-display="push" data-theme="b">
+		<h1> Chevy 4 </h1>	
+			<p> here's all the fun details about this product....... </p>
+			<p> yep thats it </p>		
+	</div>
+	
+	<div data-role="panel" id="trimPanel1" data-position="right" data-display="push" data-theme="b">
+		<h1> Trim 1 </h1>	
+			<p> here's all the fun details about this product....... </p>
+			<p> yep thats it </p>		
+	</div>
+	
+	<div data-role="panel" id="trimPanel2" data-position="right" data-display="push" data-theme="b">
+		<h1> Trim 2 </h1>	
+			<p> here's all the fun details about this product....... </p>
+			<p> yep thats it </p>	
+	</div>
+	
+	<div data-role="panel" id="trimPanel3" data-position="right" data-display="push" data-theme="b">
+		<h1> Trim 3 </h1>	
+			<p> here's all the fun details about this product....... </p>
+			<p> yep thats it </p>	
+	</div>
+	
+	<div data-role="panel" id="trimPanel4" data-position="right" data-display="push" data-theme="b">
+		<h1> Trim 4 </h1>	
+			<p> here's all the fun details about this product....... </p>
+			<p> yep thats it </p>		
+	</div>
+	
+	<div data-role="panel" id="partPanel1" data-position="right" data-display="push" data-theme="b">
+		<h1> Interior Parts 1 </h1>	
+			<p> here's all the fun details about this product....... </p>
+			<p> yep thats it </p>		
+	</div>
+	
+	<div data-role="panel" id="partPanel2" data-position="right" data-display="push" data-theme="b">
+		<h1> Interior Parts 2 </h1>	
+			<p> here's all the fun details about this product....... </p>
+			<p> yep thats it </p>		
+	</div>
+	
+	<div data-role="panel" id="partPanel3" data-position="right" data-display="push" data-theme="b">
+		<h1> Interior Parts 3 </h1>	
+			<p> here's all the fun details about this product....... </p>
+			<p> yep thats it </p>		
+	</div>
+	
+	<div data-role="panel" id="partPanel4" data-position="right" data-display="push" data-theme="b">
+		<h1> Interior Parts 4 </h1>	
+			<p> here's all the fun details about this product....... </p>
+			<p> yep thats it </p>		
+	</div>
+	
+<header>
+	<ul class="scroll1">
+		<li><img src="images/chevy1.jpg" height="300px" width="300px" alt="" /></li>
+		<li><img src="images/trim1.jpg" height="300px" width="300px" alt="" /></li>
+		<li><img src="images/trim2.jpg" height="300px" width="300px" alt="" /></li>
+		<li><img src="images/chevy2.jpg" height="300px" width="300px" alt="" /></li>
+		<li><img src="images/parts1.jpg" height="300px" width="300px" alt="" /></li>
+		<li><img src="images/parts2.jpg" height="300px" width="300px" alt="" /></li>
+	</ul>
+</header>
+
+<main>
+	<div id="main-container">
+		<ul id="menu">
+			<li><div><a href="#background">Background</a></div></li>
+			<li><div><a href="#products">Products</a></div></li>
+			<li><div><a href="#map">Map</a></div></li>
+			<li><div><a href="#satisfaction">Satisfaction</a></div></li>
+			<li><div><a href="#reserve">Reserve Now</a></div></li>
+			<li><div><a href="#contact">Contact</a></div></li>
+		</ul>
+		
+		<div id="background-container">
+			<div id="background">
+				<h1> Welcome to Some Chevy Store Website </h1>
+				<p> Our background mainly consists of... Just Opened! We sell interior parts, trims and we provide car rentals. </p>
+				<p> Some stuff may be out of stock, but oh well! We don't know when we'll get the newest inventory because we were created within a timespan of about 2-ish hours </p>
+				<br>
+				<p> click on tabs below to see parts and descriptions, map is below as well as satsifaction from definitely not made up customers! </p>
+				<p> If you wish to make a reservation feel free to below! Do note, real reservations may be honored the 38th of February 3031 </p>
+			</div> <!-- end bg div -->
+		</div>  <!-- end bg container div -->
+		
+		
+		<div id="products">
+			<div id="tabs">
+				<ul>
+					<li><a href="#interior">Interior Parts</a></li>
+					<li><a href="#trims">Trims</a></li>
+					<li><a href="#rentals">Rentals</a></li>    
+				</ul>
+			
+				<div id="interior">
+					<!-- accordion widget -->
+					<div id="interior-accordion">
+						<h3> Interior Part 1 </h3>
+							<div>
+								<img src="images/parts1.jpg" height="300px" width="300px" alt="" />
+								<a href="#chevyPanel1">details</a>
+							</div>
+						<h3> Interior Part 2 </h3>
+							<div>
+								<img src="images/parts2.jpg" height="300px" width="300px" alt="" />
+								<a href="#partPanel2">details</a>
+							</div>
+						<h3> Interior Part 3 </h3>
+							<div>
+								<img src="images/parts3.png" height="300px" width="300px" alt="" />
+								<a href="#partPanel3">details</a>
+							</div>
+						<h3> Interior Part 4 </h3>
+							<div>
+								<img src="images/parts4.jpg" height="300px" width="300px" alt="" />
+								<a href="#partPanel4">details</a>
+							</div>
+					</div> <!--end interior accordion widget -->
+				</div>
+			
+				<div id="trims">
+					<div id="trim-accordion">
+						<h3> Chevy with Trim 1 </h3>
+							<div>
+								<img src="images/trim1.jpg" height="300px" width="300px" alt="" />
+								<a href="#trimPanel1">details</a>
+							</div>
+						<h3> Chevy with Trim 2 </h3>
+							<div>
+								<img src="images/trim2.jpg" height="300px" width="300px" alt="" />
+								<a href="#trimPanel2">details</a>
+							</div>
+						<h3> Chevy with Trim 3 </h3>
+							<div>
+								<img src="images/trim3.png" height="300px" width="300px" alt="" />
+								<a href="#trimPanel3">details</a>
+							</div>
+						<h3> Chevy with Trim 4 </h3>
+							<div>
+								<img src="images/trim4.png" height="300px" width="300px" alt="" />
+								<a href="#trimPanel4">details</a>
+							</div>
+					</div> <!--end trim accordion widget -->
+				</div>
+			
+				<div id="rentals">
+					<div id="rentals-accordion">
+						<h3> Chevy Rental 1 </h3>
+							<div>
+								<img src="images/chevy1.jpg" height="300px" width="300px" alt="" />
+								<a href="#chevyPanel1">details</a>
+							</div>
+						<h3> Chevy Rental 2 </h3>
+							<div>
+								<img src="images/chevy2.jpg" height="300px" width="300px" alt="" />
+								<a href="#chevyPanel2">details</a>
+							</div>
+						<h3> Chevy Rental 3 </h3>
+							<div>
+								<img src="images/chevy3.jpg" height="300px" width="300px" alt="" />
+								<a href="#chevyPanel3">details</a>
+							</div>
+						<h3> Chevy Rental 4 </h3>
+							<div>
+								<img src="images/chevy4.jpg" height="300px" width="300px" alt="" />
+								<a href="#chevyPanel4">details</a>
+							</div>
+					</div> <!--end rentals accordion widget -->
+				</div>
+			
+			</div> <!-- end tabs widget -->
+			</div> <!-- end products div -->
+		
+		<div id="map-container">
+			<div id="map"></div>
+
+		</div>  <!-- end map container div -->
+		
+		<div id="satisfaction-container">
+		<div id="satisfaction">
+			<h1> Here are some definitely satisfied customers of ours! </h1>
+			<table>
+			  <tr>
+				<th>Customer 1</th>
+				<th>Customer 2</th>
+				<th>Customer 3</th>
+			  </tr>
+			  <tr>
+				<td>5 outta 5 stars</td>
+				<td>5 outta 5 stars</td>
+				<td>1 outta 5 stars</td>
+			  </tr>
+			  <tr>
+				<td>Satisfied!</td>
+				<td>Mostly satisified!</td>
+				<td>Was told to be satisified</td>
+			  </tr>
+			</table>
+		</div> <!-- end satisfy div -->
+		</div>
+
+		
+		
+		<div id="reserve-container">
+			<div id="reserve">
+				<h3> Email us for a reservation! </h3>
+				<form id="appointment">
+					<p>
+						<label for="fName">First Name:</label>
+						<input type="text" name="fName" id="fName" placeholder="John"/>
+						<label for="lName">Last Name:</label>
+						<input type="text" name="lName" id="lName" placeholder="Smith"/>
+					</p>
+					<p>
+						<label for="email">Email:</label>
+						<input type="email" name="email" id="email" placeholder="email@email.com"/>
+					</p>
+					<p>
+						<label for="date">Appt Date:</label>
+						<input class="appt-date" name="date" id="date"/>
+					</p>
+	
+					<input type="submit" name="appt-submit" id="appt-submit" value=" Email "/>
+				</form>
+			</div>
+		</div>
+			
+			
+			<div id="buynow-container">
+				<h1> Buy Now! </h1>
+				
+				<div id="buynow">
+				<ul id="sortable">
+					<h1> Here's your list of items to buy from! You may drag and drop to sort the list </h1>
+					<li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s" id="buychevy"></span>Chevy 1</li>
+				    <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s" id="outofstock"></span>Chevy 2 (OUT OF STOCK)</li>
+				    <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s" id="outofstock"></span>Interior Part 1 (OUT OF STOCK)</li>
+				    <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s" id="buypart"></span>Interior Part 2</li>
+				    <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s" id="outofstock"></span>Chevy 3 with Trim 2  (OUT OF STOCK)</li>
+				</ul>
+		
+				<form id="purchase">
+					<p>
+						<label for="fName">First Name:</label>
+						<input type="text" name="fName" id="fName" placeholder="John"/>
+						<label for="lName">Last Name:</label>
+						<input type="text" name="lName" id="lName" placeholder="Smith"/>
+					</p>
+					<p>
+						<label for="phone">Phone:</label>
+						<input type="phone" name="phone" id="phone" placeholder="111-111-1111"/>
+					</p>
+					<p>
+						<label for="email">Email:</label>
+						<input type="email" name="email" id="email" placeholder="email@email.com" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"/>
+					</p>
+					
+					<p>
+						<label>Item to Buy:</label>
+						<label id="itemtobuy"> </label>
+					</p>
+	
+					<input type="submit" name="buy-submit" id="buy-submit" value=" Buy Now "/>
+				</form>
+			</div>
+		</div> <!-- end buy now container div -->
+		
+		
+		<div id="contact-container">
+			<div id="contact">
+				 <p>Contact us at: <a href="mailto:riqueriver93@gmail.com">someemailforchevys@gmail.com</a></p>
+				 <p> Phone: 111-111-1111 </p>
+			</div>
+		</div> <!--end contact container div -->
+		
+		
+	</div> <!-- end main container -->
+</main>
+
+</body>
+</html>

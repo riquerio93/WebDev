@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+<main>
+    <h1>Select Incident</h1>
+
+	<section>
+	    <?php if(!empty($incidents)) : ?>
+		<p>
+			<form action="." method="post">
+			<input type="hidden" name="action" value="select_incident">
+			
+		</p>
+		
+		 <table>
+            <tr>
+                <th>Customer</th>
+                <th>Product</th>
+				<th>Date Opened</th>
+				<th>Title</th>
+				<th>Descripton</th>
+                <th>&nbsp;</th>
+            </tr>
+
+            <?php foreach ($incidents as $incident) : ?>
+            <tr>
+                <td><?php echo $incident['firstName'] . ' ' . $incident['lastName']; ?></td>
+				<td><?php echo $incident['productCode']; ?></td>
+				<td><?php $date = new DateTime($incident['dateOpened']); echo $date->format('m/d/y'); ?></td>
+				<td><?php echo $incident['title']; ?></td>
+				<td><?php echo $incident['description']; ?></td>
+				
+				<td>
+				   <form action="." method="post">
+				   <input type="hidden" name="action" value="update_incident">
+					
+                    <input type="hidden" name="incidentID"
+                           value="<?php echo $incident['incidentID']; ?>">
+				    <input type="hidden" name="custID"
+                           value="<?php echo $incident['customerID']; ?>">
+                    <input type="submit" value="Select">
+					</form>
+				</td>
+				
+				
+            </tr>
+            <?php endforeach; ?> 
+        </table> 
+				
+		<?php else: ?>
+		<p> This technician has no open incidents. </p>
+		<a href="."> Refresh List Of Incidents </a>
+		<?php endif; ?>
+			</form>
+			
+			<form action="." method ="post">
+            <input type="hidden" name="action" value="logout" />
+            <p>You are logged in as <?php echo $_SESSION['technicianEmail']; ?></p> 
+
+            <input type="submit" name ="logout" value="logout" />
+			</form>
+			
+	</section>
+   
+</main>
+
+</body>
+</html>

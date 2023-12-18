@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Ch11 Lab</title>
+	<link href="main.css" rel="stylesheet" />
+	
+	<!-- jquery, widgets and themes -->
+    <link  href="https://code.jquery.com/ui/1.13.2/themes/smoothness/jquery-ui.min.css" rel="stylesheet"/>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+
+	<!--slick carousel plugin-->
+	<!-- 
+	REFERENCE LINK
+	https://www.jqueryscript.net/slider/Fully-Responsive-Flexible-jQuery-Carousel-Plugin-slick.html 
+	-->
+	<link rel="stylesheet" href="plugins/slick-master/slick/slick.css"/>
+    <link rel="stylesheet" href="plugins/slick-master/slick/slick-theme.css"/>
+	<script src="plugins/slick-master/slick/slick.js"></script>
+	
+	<!--tablesorter plugin-->
+	<!-- 
+	REFERENCE LINK
+	https://github.com/Mottie/tablesorter
+	-->
+	<link rel="stylesheet" href="plugins/tablesorter-master/dist/css/theme.default.min.css"/>
+	<script src="plugins/tablesorter-master/dist/js/jquery.tablesorter.js"></script>
+
+
+
+    <script>
+    $(function(){
+        $( "#tabs" ).tabs();
+    })
+	
+	$(function(){
+        $( "#accordion" ).accordion();
+    })
+	
+	$( function() {
+    var availableTags = [
+      "Pokemon",
+      "LeagueOfLegends",
+      "WorldOfWarcraft",
+      "Minecraft",
+      "Halo",
+      "CallofDuty",
+      "Valorant",
+      "AmongUs",
+      "ResidentEvil",
+      "FinalFantasy",
+      "SilentHill",
+      "Mario",
+      "SuperSmashBros",
+      "Tetris",
+      "Pacman",
+      "LegendOfZelda",
+      "Doom",
+      "Megaman",
+      "FiveNightsAtFreddies",
+      "PlateUp",
+      "EldenRing",
+      "GrandTheftAuto"
+    ];
+    $( "#tags" ).autocomplete({
+      source: availableTags
+    });
+  } );
+	
+	$(function(){
+        $('.autoplay').slick({
+			slidesToShow: 3,
+			slidesToScroll: 1,
+			autoplay: true,
+			autoplaySpeed: 1000,
+		});
+	
+    })
+	
+	$(function() {
+		$("#myTable").tablesorter();
+	});
+    </script>
+    <style>
+
+    </style>
+</head>
+<body>
+<h1> About Me </h1>
+<!--tabs widget -->
+<div id="tabs">
+ <ul>
+  <li><a href="#Fitness">FITNESS</a></li>
+  <li><a href="#ScubaDiving">SCUBA DIVING</a></li>
+  <li><a href="#Academia">ACADEMIA</a></li>
+  <li><a href="#Gaming">GAMING</a></li>    
+ </ul>
+ 
+ <div id="Fitness">
+	<!-- accordion widget -->
+	<p> I am a level 1 Crossfit Trainer and a level 1 USA-Weightlifting Coach. </p>
+	<p> Here are some old Olympic Lifting demo videos. </p>
+	<div id="accordion">
+		<h3> Deadlift </h3>
+			<div>
+				<video controls poster="">
+					<source src="media/Deadlift-Side.mp4" type="video/mp4">
+					Your browser does not support the video element.
+				</video>
+				<p>
+					Demo
+				</p>
+				<video controls poster="">
+					<source src="media/Deadlift-315.mp4" type="video/mp4">
+					Your browser does not support the video element.
+				</video>
+				<p>
+					Most recent Deadlift PR. 315lbs. <br> (Note, rounded back is not good!)
+				</p>
+			</div>
+		<h3> Cleans </h3>
+		<div>
+			<video controls poster="">
+				<source src="media/Power-Clean-Side.mp4" type="video/mp4">
+				Your browser does not support the video element.
+			</video>
+			<p>
+				Power Clean
+			</p>
+			<video controls poster="">
+				<source src="media/Full-Clean-Side.mp4" type="video/mp4">
+				Your browser does not support the video element.
+			</video>
+			<p>
+				Full Clean aka Squat Clean
+			</p>
+		</div>
+		<h3> Snatches </h3>
+		<div>
+			<video controls poster="">
+				<source src="media/Power-Snatch-Side.mp4" type="video/mp4">
+				Your browser does not support the video element.
+			</video>
+			<p>
+				Power Snatch
+			</p>
+			<video controls poster="">
+				<source src="media/Full-Snatch-Side.mp4" type="video/mp4">
+				Your browser does not support the video element.
+			</video>
+			<p>
+				Full Snatch aka Squat Snatch
+			</p>			
+		</div>
+	</div> <!--end accordion widget -->
+ </div>
+ 
+ <div id="ScubaDiving">
+    <!--slick autoplay carousel plugin --> 
+	<p> I am a certified PADI Advanced Open Water scuba diver </p>
+	<h2>Diving Images Autoplayer</h2>
+				<div class="autoplay">
+					<div class="multiple"><h3><img src="images/Dive1.png" style="height:200px;width:250px;"/></h3></div>
+					<div class="multiple"><h3><img src="images/Dive2.png" style="height:200px;width:250px;"/></h3></div>
+					<div class="multiple"><h3><img src="images/Dive3.png" style="height:200px;width:250px;"/></h3></div>
+					<div class="multiple"><h3><img src="images/Dive4.png" style="height:200px;width:250px;"/></h3></div>
+					<div class="multiple"><h3><img src="images/Dive5.png" style="height:200px;width:250px;"/></h3></div>
+					<div class="multiple"><h3><img src="images/Dive6.png" style="height:200px;width:250px;"/></h3></div>
+					<div class="multiple"><h3><img src="images/Dive7.png" style="height:200px;width:250px;"/></h3></div>
+					<div class="multiple"><h3><img src="images/Dive8.png" style="height:200px;width:250px;"/></h3></div>
+				</div>
+
+ </div>
+ 
+ <div id="Academia">
+	<p> Just some of my education and certifications I have. Some of which, has already been listed in previous tabs <p>
+	<!-- tablesorter plugin -->
+	<table id="myTable" class="tablesorter-default">
+  <thead>
+    <tr>
+      <th>Degree/Cert</th>
+      <th>Institution</th>
+      <th>Year Earned</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>B.A. Computer Science</td>
+      <td>Florida State University</td>
+      <td>2016</td>
+    </tr>
+    <tr>
+      <td>B.S. Digital Media & Web Development</td>
+      <td>Gulf Coast State College</td>
+      <td>(TBO) Summer 2023</td>
+    </tr>
+    <tr>
+      <td>A.S. Business Administration & Management</td>
+      <td>Gulf Coast State College</td>
+      <td>2022</td>
+    </tr>
+    <tr>
+      <td>Certified DevSecOps Professional</td>
+      <td>Practical DevSecOps</td>
+      <td>2021</td>
+    </tr>
+	<tr>
+      <td>USA Weightlifting Level 1</td>
+      <td>Team USA Weightlifting</td>
+      <td>2022</td>
+    </tr>
+	<tr>
+      <td>CrossFit Level 1</td>
+      <td>CrossFit LLC</td>
+      <td>2021</td>
+    </tr>
+	<tr>
+      <td>PADI Advanced Diver</td>
+      <td>PADI</td>
+      <td>2022</td>
+    </tr>
+  </tbody>
+</table>
+ </div>
+ 
+ <div id="Gaming">
+	<p> I love gaming in my free time. What are some of your favorite games? <br> 
+	You cant input anything, but the autochecker should bring up some of the top known games! <p>
+	<!--autocomplete widget -->
+	<div class="ui-widget">
+		<label for="tags">Games: </label>
+		<input id="tags">
+	</div> <!--end autocomplete widget -->
+ </div>
+ 
+</div>  <!--end tabs widget -->
+
+</body>
+</html>

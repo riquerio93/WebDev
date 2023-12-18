@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <title>Chapter 10 Lab</title>
+	<link rel="stylesheet" href="main.css">
+	<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>	
+   	<script src="jquery_ch10.js"></script>   	
+</head>
+
+<body>
+	<main>
+		<h1> Finish Purchase </h1>
+		<form id="purchaseForm">
+		<!-- Section 1 uses email, tel, title, required -->
+			<div id="personalInfo">
+				<p>
+					<label for="fName">First Name</label>
+					<input type="text" id="fName" name="fName" required>
+					<label for="lName">Last Name</label>
+					<input type="text" id="lName" name="lName" required>
+				</p>
+				<p>
+					<label for="email">School Email Address</label>
+					<input type="email" id="email" name="email" required>
+					<label for="phone">Phone Number</label>
+					<input type="tel" id="phone" name="phone" required>
+				</p>
+				
+			</div>
+			
+			<!-- Section 1 uses date, time
+			autofocus, 2 placeholders, required, title, pattern, novalidate -->
+			<div id="purchaseInfo">
+				<p>
+					<label for="ccNumber">Credit Card Number</label>
+					<input type="text" id="ccNumber" name="ccNumber" placeholder="XXXX-XXXX-XXXX-XXXX" pattern="[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{4}" title="XXXX-XXXX-XXXX-XXXX" required autofocus>
+				</p>
+				<p>
+					<label for="expDate">Expiration Date</label>
+					<input type="date" id="expDate" name="expDate" required>
+				</p>
+				<p>
+					<label for="cvNumber">CCV</label>
+					<input type="text" id="cvNumber" name="cvNumber" placeholder="123" pattern="[0-9]{3}" required>
+				</p>
+				<p>
+					<label for="delDate">Delivery Date</label>
+					<input type="date" id="delDate" name="delDate" novalidate>
+				</p>
+				<p>
+					<label for="delTime">Delivery Time</label>
+					<input type="time" id="delTime" name="delTime" min="08:00" max="20:00" novalidate>
+				</p>
+					<input type="submit" id="submitButton">
+				<br><br>
+				<a href="validate.html">To WebPage Using JQuery Validate Plugin</a>
+			</div>
+		</form>
+	</main>
+	<div id="testResults">
+		<h1> Test Results </h1>
+		<p id="resultEmail"> </p>
+		<p id="resultPhone"> </p>
+		<p id="resultFName"> </p>
+		<p id="resultLName"> </p>
+		<input type="submit" id="refreshButton" value="Refresh Page">
+	</div>
+</body>
+</html>
+

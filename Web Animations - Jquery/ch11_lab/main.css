@@ -1,0 +1,33 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+h1 {
+	color:  black;
+	padding: 5px;
+}
+
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	margin: auto;
+    padding: 5px;
+    width: 75%;
+    border: 3px solid black;
+}
+
+div#tabs {
+	text-align: center;
+	width: 50%
+}
+
+div#accordion {
+
+}
+
+video {
+	display: block;
+	line-height: 0;
+	height: 250px;
+	width: 450px;
+}

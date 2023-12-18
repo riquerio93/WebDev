@@ -1,0 +1,55 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+h1 {
+	color:  black;
+	padding: 5px;
+}
+
+main {
+	font-family: Arial, Helvetica, sans-serif;
+
+    padding: 0 2em 1em;
+    height: 150px;
+    width: 600px;
+    border: 3px solid black;
+    display: none;
+}
+
+aside {
+	display: block;
+	width: 100px;
+	float:  center;
+}
+
+img {
+	height: 100px;
+}
+
+.sunrise {
+	background: rgb(15,179,212); /*for non-gradient supportive browsers*/
+	background: -moz-linear-gradient(0deg, rgba(168,118,17,1) 0%, rgba(118,118,223,1) 30%, rgba(15,179,212,1) 100%);
+	background: linear-gradient(0deg, rgba(168,118,17,1) 0%, rgba(118,118,223,1) 30%, rgba(15,179,212,1) 100%) fixed;
+}
+
+.day {
+	background: rgb(0,249,255); /*for non-gradient supportive browsers*/
+	background: -moz-linear-gradient(0deg, rgba(107,73,132,1) 0%, rgba(43,47,119,1) 5%, rgba(7,11,52,1) 100%);
+	background: linear-gradient(0deg, rgba(254,255,243,1) 0%, rgba(252,253,136,1) 5%, rgba(0,249,255,1) 100%) fixed;
+}
+
+.sunset {
+	color: white;
+	background: rgb(75,61,96); /*for non-gradient supportive browsers*/
+	background: -moz-linear-gradient(0deg, rgba(255,227,155,1) 0%, rgba(253,94,83,1) 30%, rgba(75,61,96,1) 100%);
+	background: linear-gradient(0deg, rgba(255,227,155,1) 0%, rgba(253,94,83,1) 30%, rgba(75,61,96,1) 100%) fixed;
+}
+
+.night {
+	color: white;
+	background: rgb(7,11,52); /*for non-gradient supportive browsers*/
+	background: -moz-linear-gradient(0deg, rgba(107,73,132,1) 0%, rgba(43,47,119,1) 5%, rgba(7,11,52,1) 100%);
+	background: linear-gradient(0deg, rgba(107,73,132,1) 0%, rgba(43,47,119,1) 5%, rgba(7,11,52,1) 100%) fixed;
+}

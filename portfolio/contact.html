@@ -1,0 +1,135 @@
+<!--
+	Student Name: Rio Orozco
+	File Name: contact.html
+	Date: 01/25/2022
+-->
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta charset="utf-8">
+	<meta name="Description" content="Just a shot at a Portfolio Website">
+	
+	<link rel="stylesheet" href="css/styles.css"> 
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova&family=Share+Tech&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<!--
+	    <link rel="icon" type="image/x-icon" href="imgs/favicon.ico"> -->
+    <title>Contact Page</title>
+  </head>
+  <body>
+  
+  <header> 
+	<h1> Rique Rio Orozco </h1>
+	<figure>
+		<img class="header_background_image" src="images/Gym-Background.jpg" alt="A Gym Background">
+		<figcaption> 
+		    <img class="header_figcap_image_mobile" src="images/ocean_rio.jpg" alt="Rio Orozco on a boat in the ocean">
+			<img class="header_figcap_image_tab-desktop" src="images/ocean_rio.jpg" alt="Rio Orozco on a boat in the ocean">
+			<h2> Just coding my way through life. One segmentation fault at a time </h2>
+			<br>
+			<h1> &#9993; </h1><h3> Contact </h3>
+		</figcaption>
+	</figure>
+  </header>
+
+  
+  <nav>
+	<div class="mobileNavContainer">
+		<a href="index.html">Home</a>
+		<div id="mobileNav">
+			<ul>
+				<li><a href="about.html">About</a></li>
+				<li><a href="fitness.html">Fitness</a></li>
+				<li><a href="projects.html">Projects</a></li>
+				<li><a href="twitch.html">Twitch</a></li>
+				<li><a href="contact.html">Contact</a></li>
+			</ul>
+		</div>
+		<a href="javascript:void(0);" class="icon" onclick="menu()">
+			<i class="fa fa-bars"></i>
+		</a>
+	</div>
+	
+	<ul class="tab-desktop">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="fitness.html">Fitness</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="twitch.html">Twitch</a></li>
+	  <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main> 
+	<div id="contentDiv">
+    <h2 style="text-align: center;">Any questions or opportunities you may have, feel free to contact me using the form below.</h2>
+    <!--Start form -->
+    <form class="mobile_form"> 
+      <fieldset> 
+        <legend>Contact Information</legend>
+        <label for="fName">First Name:</label>
+        <input type="text" name="fName" id="fName">
+		<br>
+        <label for="lName">Last Name:</label>
+        <input type="text" name="lName" id="lName">
+		<br>
+        <label for="bName">Name of Business:</label>
+        <input type="text" name="bName" id="bName">
+		<br>
+        <label for="email">Email:</label>
+        <input type="text" name="email" id="email">
+		<br>
+        <label for="phone">Phone:</label>
+        <input type="text" name="phone" id="phone">
+      </fieldset>
+      <fieldset> 
+        <label for="questions">Additional Information</label> <br>
+        <textarea name="questions" id="questions" rows="5" cols="35"></textarea>
+      </fieldset>
+
+      <input type="submit" id="submit" value="Submit" class="btn">
+    </form>
+	
+	<form class="tab-desktop_form"> 
+      <fieldset> 
+        <legend>Contact Information</legend>
+        <label for="fName">First Name:</label>
+        <input type="text" name="fName" id="fName">
+
+        <label for="lName">Last Name:</label>
+        <input type="text" name="lName" id="lName">
+
+        <label for="bName">Name of Business:</label>
+        <input type="text" name="bName" id="bName">
+
+        <label for="email">Email:</label>
+        <input type="text" name="email" id="email">
+
+        <label for="phone">Phone:</label>
+        <input type="text" name="phone" id="phone">
+      </fieldset>
+      <fieldset> 
+        <label for="questions">Additional Information</label> <br>
+        <textarea name="questions" id="questions" rows="5" cols="35"></textarea>
+      </fieldset>
+
+      <input type="submit" id="submit" value="Submit" class="btn">
+    </form>
+  </div>
+  </main>
+	
+  <footer>
+    <p>Contact me at: <a href="mailto:riqueriver93@gmail.com">riqueriver93@gmail.com</a></p>
+	<p> &copy; Copyright 2022. All Rights Reserved. </p>
+  </footer>
+
+   <script src="scripts/script.js">
+	
+  </script>
+  
+  </body>
+</html>
